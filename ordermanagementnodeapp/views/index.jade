@@ -1,0 +1,77 @@
+extends layout
+
+block content
+    h1= title
+
+    // Wrapper
+    #wrapper
+
+        // ORDER INFORMATION
+        #orderInfo
+            h2 Order Details
+            p
+                strong OrderNo:
+                |  <span id='orderNo'></span>
+                br
+                strong FirstName:
+                |  <span id='orderFirstName'></span>
+                br
+                strong LastName:
+                |  <span id='orderLastName'></span>
+                br
+                strong Company:
+                |  <span id='orderCompany'></span>
+                br
+                strong Email:
+                |  <span id='orderEmail'></span>
+                br
+                strong Phone:
+                |  <span id='orderPhone'></span>
+                br
+                strong Address:
+                |  <span id='orderAddress'></span>
+                br
+                strong Details:
+                |  <span id='orderDetails'></span>
+                br
+                strong Status:
+                |  <span id='orderStatus'></span>
+        // /ORDER INFORMATION
+
+        // ORDER LIST
+        h2 Order List
+        #orderList
+            table
+                thead
+                    th OrderNo
+                    th Status
+                    th Delete?
+                tbody
+        // /ORDER LIST
+
+        // ADD ORDER
+        h2 Add Order
+        #addOrder
+            fieldset
+                input#inputOrderNo(type='text', placeholder='OrderNo')
+                br
+                input#inputOrderFirstName(type='text', placeholder='First Name')
+                br
+                input#inputOrderLastName(type='text', placeholder='Last Name')
+                br
+                input#inputOrderCompany(type='text', placeholder='Company')
+                br
+                input#inputOrderEmail(type='text', placeholder='Email')
+                br
+                input#inputOrderPhone(type='text', placeholder='Phone')
+                br
+                input#inputOrderAddress(type='text', placeholder='Address')
+                br
+                input#inputOrderDetails(type='text', placeholder='Details')
+                br
+                input#inputOrderStatus(type='text', placeholder='Status')
+                br
+                button#btnAddUser Add Order
+        // /ADD ORDER
+
+    // /WRAPPER
