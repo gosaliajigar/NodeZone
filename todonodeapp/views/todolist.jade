@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h1.
+       Todo List
+
+    table
+      tr
+       th Priority
+       th Category
+       th Date
+       th Details
+      if (todolist.length)
+       each todo, i in todolist
+         tr
+          td= todo.priority
+          td= todo.category
+          td= todo.date
+          td= todo.details

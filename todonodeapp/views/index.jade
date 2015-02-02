@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  h2.
+      Available URLs are
+  ul
+      each url in urllist
+        li
+           a(href="http://localhost:3000#{url}")= url
