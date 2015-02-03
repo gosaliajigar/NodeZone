@@ -9,7 +9,7 @@ $(document).ready(function() {
     $('#orderList table tbody').on('click', 'td a.linkshoworder', showOrderInfo);
 
     // Add Order button click
-    $('#btnAddUser').on('click', addOrder);
+    $('#btnAddOrder').on('click', addOrder);
 
     // Delete Order link click
     $('#orderList table tbody').on('click', 'td a.linkdeleteorder', deleteOrder);
@@ -35,9 +35,9 @@ function populateTable() {
         // For each item in our JSON, add a table row and cells to the content string
         $.each(data, function(){
             tableContent += '<tr>';
-            tableContent += '<td><a href="#" class="linkshowuser" rel="' + this.orderno + '">' + this.orderno + '</a></td>';
+            tableContent += '<td><a href="#" class="linkshoworder" rel="' + this.orderno + '">' + this.orderno + '</a></td>';
             tableContent += '<td>' + this.status + '</td>';
-            tableContent += '<td><a href="#" class="linkdeleteuser" rel="' + this._id + '">delete</a></td>';
+            tableContent += '<td><a href="#" class="linkdeleteorder" rel="' + this._id + '">delete</a></td>';
             tableContent += '</tr>';
         });
 
